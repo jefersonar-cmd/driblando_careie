@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/dentista-branco.png');
+    background-size: cover, 100vh;
+}
+.container{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: 100vh;
+    max-width: auto;
+    max-height: auto;
+    color: white;
+}
+header{
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+ul li {
+    padding: 5px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+ul li a:hover{
+    color: blue;
+    transition: 0.5s ease-out all;
+}
+.caixas{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.item {
+    display: block;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 25px;
+    border: 2px solid;
+    margin: 5px;
+}
+.list th, .list td{
+    border: 1px solid;
+    padding: 5px;
+    justify-self:center;
+}
+.visible{
+    visibility: hidden;
+}
