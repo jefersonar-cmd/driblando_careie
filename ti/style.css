@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/dentista-branco.png');
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50) 100%), url("../img/dentista-branco.png");
     background-size: cover, 100vh;
 }
 .container{

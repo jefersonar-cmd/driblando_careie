@@ -7,12 +7,12 @@ if(isset($_GET['enter'])){
         $login = $_GET['login'];
         $pass = hash('sha256', $_GET['pass']);
 
-        $comand = "SELECT * FROM `usuarios` where login='$login' and pass='$pass'";
+        $comand = "SELECT * FROM users where login='$login' and pass='$pass'";
         $query = mysqli_query($conn, $comand);
         $result = mysqli_fetch_assoc($query);
         if($query){
-            $_SESSION['acess'] = $result['acess'];
-            $_SESSION['id'] = $result['id'];
+            $_SESSION['acess'] = $result['fk_acess'];
+            $_SESSION['id'] = $result['id_users'];
             $_SESSION['login'] = $result['login'];
             header(('Location: logado/'));
             exit;
