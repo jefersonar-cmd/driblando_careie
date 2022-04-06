@@ -7,7 +7,7 @@
             <td>Email</td>
             <td>Excluir</td>
         </tr>
-        <?
+        <?php
         $list_query = mysqli_query($conn, "SELECT * FROM users");
         while($res_list = mysqli_fetch_object($list_query)){
             $id = $res_list->id_users;
@@ -18,7 +18,7 @@
             $acesso = mysqli_fetch_assoc($query);
             echo "<td>".$acesso['nome_acesso']."</td>";
             echo "<td>".$res_list->email."</td>";
-            echo "<td><a href='excluir.php?id=$id'>X</a></td>";
+            echo "<td><a href='excluir.php?id=$id'><span class='material-icons'>delete</span></a></td>";
         }
         ?>
     </table>

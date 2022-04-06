@@ -5,7 +5,9 @@
 }
 body{
     background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50) 100%), url("../img/dentista-branco.png");
-    background-size: cover, 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .container{
     display: flex;
@@ -18,11 +20,12 @@ body{
 }
 header{
     width: 100%;
-    padding: 10px;
+    padding: 3px;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    background-color: #01c2ca;
 }
 ul {
     margin: 0;
@@ -57,11 +60,35 @@ ul li a:hover{
     border: 2px solid;
     margin: 5px;
 }
+table{
+    border-collapse: collapse;
+}
 .list th, .list td{
     border: 1px solid;
     padding: 5px;
-    justify-self:center;
+}
+.list tr td a{
+    text-decoration: none;
+    color: red;
 }
 .visible{
     visibility: hidden;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+    background-color: #01c2ca;
+    bottom: 0;
+}
+footer h5 a{
+    text-decoration: none;
+    color: black;
+}
+
+footer h5 a:hover{
+    transition: 0.5s ease-in-out all;
+    color: #fe89d1;
 }

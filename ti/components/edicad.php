@@ -5,7 +5,7 @@
             <hr>
             <select name="cadastro" id="listcad">
                 <option value="">Selecione o Usuário</option>
-                <?
+                <?php
                 $query = mysqli_query($conn, "SELECT * FROM users");
                 while($result = mysqli_fetch_object($query)){
                     echo "<option value='$result->id_users'>$result->login</option>";
@@ -17,7 +17,7 @@
         </form>
     </div>
     <div class="resultado">
-        <?
+        <?php
         if(isset($_POST['select'])){
             $id = $_POST['cadastro'];
             $query = mysqli_query($conn, "SELECT * FROM users where id_users='$id'");
@@ -25,15 +25,15 @@
         ?>
         <section class="item">
             <form action="edit.php" method="get">
-                <input type="number" name="id_user" value="<?echo $id;?>" hidden>
+                <input type="number" name="id_user" value="<?php echo $id;?>" hidden>
                 <section>
                     <label for="lg">Login</label>
-                    <input type="text" name="login" id="lg" value="<?echo $assoc['login'];?>">
+                    <input type="text" name="login" id="lg" value="<?php echo $assoc['login'];?>">
                 </section>
                 <section>
                     <label for="ac">Acesso</label>
                     <select name="acesso" id="ac">
-                        <option value="<?echo $assoc['fk_acess'];?>"><?
+                        <option value="<?php echo $assoc['fk_acess'];?>"><?php
                         switch ($assoc['fk_acess']){
                             case 1:
                                 echo "Administrador";
@@ -70,7 +70,7 @@
                 </section>
                 <section>
                         <label for="eml">E-mail</label>
-                        <input type="email" name="email" id="eml" value="<?echo $assoc['email'];?>">
+                        <input type="email" name="email" id="eml" value="<?php echo $assoc['email'];?>">
                 </section>
                 <section>
                     <label for="ps">Password</label>
@@ -80,11 +80,11 @@
                 </section>
                 <hr>
                 <section>
-                    <input type="submit" name="envie">
+                    <input type="submit" name="envie" value="Editar">
                 </section>
             </form>
         </section>
-        <?
+        <?php
         }else{
 
         }

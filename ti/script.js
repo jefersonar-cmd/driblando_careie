@@ -8,7 +8,7 @@ function validaSenha(){
         window.addEventListener('load', invisivel);
         window.alert('senha incorreta');
         window.alert('Tirando vc da reta, intruso');
-        window.location.href='http://192.168.15.7/consulta/';
+        window.location.href='http://[IP_LOCAL]/consulta/';
         localStorage.setItem('entrou', 0);
     }
 }

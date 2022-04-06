@@ -13,6 +13,8 @@ if(!empty($_SESSION['mensagem'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driblando a Cárie</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="material_icons/material_icons.css">
 </head>
 <body>
     <h1>Área de login</h1>
@@ -25,5 +27,8 @@ if(!empty($_SESSION['mensagem'])){
             <input type="submit" name="enter" value="enter">
         </form>
     </section>
+    <script src="bootstrap/bootstrap_js_4.1.3.js"></script>
+    <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
 </body>
 </html>

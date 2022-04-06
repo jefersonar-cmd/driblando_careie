@@ -11,6 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../material_icons/material_icons.css">
 </head>
 <body>
     <div class="container">
@@ -54,8 +55,11 @@ session_start();
             }
             ?>
         </div>
+        <?php
+        include('components/footer.php')
+        ?>
     </div>
-    <script src="script.js"></script>
-    <script src="../js/jquery-3.6.0.js"></script>
+    <!--<script src="script.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>-->
 </body>
 </html>
